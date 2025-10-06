@@ -1,0 +1,36 @@
+{
+  "name": "email-sync",
+  "version": "1.0.0",
+  "description": "A CLI tool for email synchronization",
+  "main": "dist/index.js",
+  "bin": {
+    "email-sync": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "lint": "biome check --apply-unsafe .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["cli", "email", "sync"],
+  "author": "Muneeb Usmani",
+  "license": "AGPL-3.0-only",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@biomejs/biome": "^1.8.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "packageManager": "pnpm@10.17.0"
+}
