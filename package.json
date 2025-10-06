@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "start": "ts-node src/index.ts",
-    "dev": "ts-node-dev --respawn src/index.ts",
+    "dev": "tsc --watch",
     "lint": "biome check --apply-unsafe .",
     "format": "biome format --write .",
     "check": "biome check .",
@@ -20,11 +20,17 @@
   "license": "AGPL-3.0-only",
   "dependencies": {
     "commander": "^11.1.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "imap-simple": "^5.1.0",
+    "mailparser": "^3.7.4",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
-    "@types/node": "^20.11.30",
     "@biomejs/biome": "^1.8.0",
+    "@types/imap-simple": "^4.2.10",
+    "@types/mailparser": "^3.4.6",
+    "@types/node": "^20.11.30",
+    "@types/pg": "^8.15.5",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
